@@ -1,28 +1,33 @@
 {
-  "name": "jinjahtml",
-  "displayName": "Better Jinja",
-  "description": "Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates",
-  "version": "0.20.0",
-  "publisher": "samuelcolvin",
-  "author": "Samuel Colvin",
+  "name": "mtrgen-vscode",
+  "displayName": "MTRGen Templates Syntax Highlighting",
+  "description": "Syntax highlighting for MTRGen including HTML, Markdown, YAML, Ruby more...",
+  "version": "0.1.0",
+  "publisher": "matronator",
+  "author": "Matronator",
   "engines": {
     "vscode": "^1.22.0"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/matronator"
   },
   "license": "MIT",
   "icon": "icon.png",
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Language Packs"
   ],
+  "homepage": "https://github.com/matronator/mtrgen-vscode",
   "keywords": [
-    "jinja",
-    "jinja2",
-    "django",
-    "markdown",
-    "yaml"
+    "mtrgen",
+    "templates",
+    "templating",
+    "syntax",
+    "highlighting"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/samuelcolvin/jinjahtml-vscode.git"
+    "url": "https://github.com/matronator/mtrgen-vscode.git"
   },
   "main": "./src/extension.js",
   "scripts": {
@@ -42,714 +47,606 @@
     "prettier": "2.7.1"
   },
   "activationEvents": [
-    "onLanguage:jinja-html"
+    "onLanguage:mtrgen-html"
   ],
   "contributes": {
     "languages": [
       {
-        "id": "jinja-html",
+        "id": "mtrgen-html",
         "aliases": [
-          "Jinja HTML",
-          "jinja-html"
+          "MTRGen HTML",
+          "mtr-html"
         ],
         "extensions": [
-          ".jinja",
-          ".jinja2",
-          ".j2",
-          ".html.j2"
+          ".html.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-xml",
+        "id": "mtrgen-xml",
         "aliases": [
-          "Jinja XML",
-          "jinja-xml"
+          "MTRGen XML",
+          "mtr-xml"
         ],
         "extensions": [
-          ".xml.j2",
-          ".xml.jinja",
-          ".xml.jinja2"
+          ".xml.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-css",
+        "id": "mtrgen-css",
         "aliases": [
-          "Jinja CSS",
-          "jinja-css"
+          "MTRGen CSS",
+          "mtr-css"
         ],
         "extensions": [
-          ".css.j2",
-          ".css.jinja",
-          ".css.jinja2"
+          ".css.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-json",
+        "id": "mtrgen-json",
         "aliases": [
-          "Jinja JSON",
-          "jinja-json"
+          "MTRGen JSON",
+          "mtr-json"
         ],
         "extensions": [
-          ".json.j2",
-          ".json.jinja",
-          ".json.jinja2",
-          ".code-workspace.j2",
-          ".code-workspace.jinja",
-          ".code-workspace.jinja2"
+          ".json.mtr",
+          ".code-workspace.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-md",
+        "id": "mtrgen-md",
         "aliases": [
-          "Jinja Markdown",
-          "jinja-md"
+          "MTRGen Markdown",
+          "mtr-md"
         ],
         "extensions": [
-          ".md.jinja",
-          ".md.jinja2",
-          ".md.j2"
+          ".md.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-py",
+        "id": "mtrgen-py",
         "aliases": [
-          "Jinja Python",
-          "jinja-py"
+          "MTRGen Python",
+          "mtr-py"
         ],
         "extensions": [
-          "py.j2",
-          "py.jinja",
-          "py.jinja2",
-          "pyi.j2",
-          "pyi.jinja",
-          "pyi.jinja2"
+          "py.mtr",
+          "pyi.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-cy",
+        "id": "mtrgen-cy",
         "aliases": [
-          "Jinja Cython",
-          "jinja-cy"
+          "MTRGen Cython",
+          "mtr-cy"
         ],
         "extensions": [
-          "pyx.j2",
-          "pyx.jinja",
-          "pyx.jinja2",
-          "pxd.j2",
-          "pxd.jinja",
-          "pxd.jinja2",
-          "pxi.j2",
-          "pxi.jinja",
-          "pxi.jinja2"
+          "pyx.mtr",
+          "pxd.mtr",
+          "pxi.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-rb",
+        "id": "mtrgen-rb",
         "aliases": [
-          "Jinja Ruby",
-          "jinja-rb"
+          "MTRGen Ruby",
+          "mtr-rb"
         ],
         "extensions": [
-          "rb.j2",
-          "rbw.j2",
-          "rb.jinja2",
-          "rbw.jinja2"
+          "rb.mtr",
+          "rbw.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-js",
+        "id": "mtrgen-js",
         "aliases": [
-          "Jinja JavaScript",
-          "Jinja JS",
-          "jinja-js"
+          "MTRGen JavaScript",
+          "MTRGen JS",
+          "mtr-js"
         ],
         "extensions": [
-          "js.j2",
-          "js.jinja2"
+          "js.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-ts",
+        "id": "mtrgen-ts",
         "aliases": [
-          "Jinja TypeScript",
-          "Jinja TS",
-          "jinja-ts"
+          "MTRGen TypeScript",
+          "MTRGen TS",
+          "mtr-ts"
         ],
         "extensions": [
-          "ts.j2",
-          "ts.jinja2"
+          "ts.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-yaml",
+        "id": "mtrgen-yaml",
         "aliases": [
-          "Jinja YAML",
-          "jinja-yaml"
+          "MTRGen YAML",
+          "mtr-yaml"
         ],
         "extensions": [
-          ".yml.j2",
-          ".yaml.j2",
-          ".yml.jinja2",
-          ".yaml.jinja2",
-          ".yml.jinja",
-          ".yaml.jinja",
-          ".sls"
+          ".yml.mtr",
+          ".yaml.mtr",
+          ".sls.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-toml",
+        "id": "mtrgen-toml",
         "aliases": [
-          "Jinja TOML",
-          "jinja-toml"
+          "MTRGen TOML",
+          "mtr-toml"
         ],
         "extensions": [
-          ".toml.j2",
-          ".toml.jinja2",
-          ".toml.jinja"
+          ".toml.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-latex",
+        "id": "mtrgen-latex",
         "aliases": [
-          "Jinja LaTeX",
-          "jinja-latex"
+          "MTRGen LaTeX",
+          "mtr-latex"
         ],
         "extensions": [
-          ".latex.j2",
-          ".tex.j2",
-          ".latex.jinja2",
-          ".tex.jinja2"
+          ".latex.mtr",
+          ".tex.mtr"
         ],
         "configuration": "./language-configuration-latex.json"
       },
       {
-        "id": "jinja-lua",
+        "id": "mtrgen-lua",
         "aliases": [
-          "Jinja Lua",
-          "jinja-lua"
+          "MTRGen Lua",
+          "mtr-lua"
         ],
         "extensions": [
-          ".lua.j2",
-          ".lua.jinja2",
-          ".lua.jinja"
+          ".lua.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-properties",
+        "id": "mtrgen-properties",
         "aliases": [
-          "Jinja Properties/ini/Conf",
-          "jinja-properties",
-          "jinja-ini",
-          "jinja-conf"
+          "MTRGen Properties/ini/Conf",
+          "mtr-properties",
+          "mtrgen-ini",
+          "mtrgen-conf"
         ],
         "extensions": [
-          ".properties.j2",
-          ".cfg.j2",
-          ".conf.j2",
-          ".desktop.j2",
-          ".directory.j2",
-          ".ini.j2"
+          ".properties.mtr",
+          ".cfg.mtr",
+          ".conf.mtr",
+          ".desktop.mtr",
+          ".directory.mtr",
+          ".ini.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-shell",
+        "id": "mtrgen-shell",
         "aliases": [
-          "Jinja Shell Script",
-          "jinja-shellscript",
-          "jinja-shell",
-          "jinja-sh",
-          "jinja-bash"
+          "MTRGen Shell Script",
+          "mtrgen-shellscript",
+          "mtr-shell",
+          "mtrgen-sh",
+          "mtrgen-bash"
         ],
         "extensions": [
-          ".sh.j2",
-          ".bash.j2",
-          ".bashrc.j2",
-          ".bash_aliases.j2",
-          ".bash_profile.j2",
-          ".bash_login.j2",
-          ".ebuild.j2",
-          ".install.j2",
-          ".profile.j2",
-          ".bash_logout.j2",
-          ".zsh.j2",
-          ".zshrc.j2",
-          ".zprofile.j2",
-          ".zlogin.j2",
-          ".zlogout.j2",
-          ".zshenv.j2",
-          ".zsh-theme.j2",
-          ".ksh.j2",
-          ".env.jinja",
-          ".env.j2",
-          ".env.jinja2"
+          ".sh.mtr",
+          ".bash.mtr",
+          ".bashrc.mtr",
+          ".bash_aliases.mtr",
+          ".bash_profile.mtr",
+          ".bash_login.mtr",
+          ".ebuild.mtr",
+          ".install.mtr",
+          ".profile.mtr",
+          ".bash_logout.mtr",
+          ".zsh.mtr",
+          ".zshrc.mtr",
+          ".zprofile.mtr",
+          ".zlogin.mtr",
+          ".zlogout.mtr",
+          ".zshenv.mtr",
+          ".zsh-theme.mtr",
+          ".ksh.mtr",
+          ".env.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-dockerfile",
+        "id": "mtrgen-dockerfile",
         "aliases": [
-          "Jinja Dockerfile",
-          "jinja-dockerfile"
+          "MTRGen Dockerfile",
+          "mtr-dockerfile"
         ],
         "extensions": [
-          ".dockerfile.j2",
-          ".dockerfile.jinja",
-          ".dockerfile.jinja2"
+          ".dockerfile.mtr"
         ],
         "filenames": [
-          "Dockerfile.j2",
-          "Dockerfile.jinja",
-          "Dockerfile.jinja2"
+          "Dockerfile.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-sql",
+        "id": "mtrgen-sql",
         "aliases": [
-          "Jinja SQL",
-          "jinja-sql"
+          "MTRGen SQL",
+          "mtr-sql"
         ],
         "extensions": [
-          ".sql.j2",
-          ".sql.jinja",
-          ".sql.jinja2"
+          ".sql.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja",
+        "id": "mtrgen",
         "aliases": [
-          "Jinja Raw",
-          "jinja-raw"
+          "MTRGen Raw",
+          "mtrgen-raw"
         ],
         "extensions": [],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-terraform",
+        "id": "mtrgen-terraform",
         "aliases": [
-          "Jinja Terraform",
-          "jinja-terraform",
-          "Jinja-HCL",
-          "jinja-hcl",
-          "Jinja-Hashicorp",
-          "jinja-hashicorp"
+          "MTRGen Terraform",
+          "mtr-terraform",
+          "MTRGen-HCL",
+          "mtrgen-hcl",
+          "MTRGen-Hashicorp",
+          "mtrgen-hashicorp"
         ],
         "extensions": [
-          ".tf.j2",
-          ".tf.jinja",
-          ".tf.jinja2",
-          ".tfvars.j2",
-          ".tfvars.jinja",
-          ".tfvars.jinja2",
-          ".hcl.j2",
-          ".hcl.jinja",
-          ".hcl.jinja2"
+          ".tf.mtr",
+          ".tfvars.mtr",
+          ".hcl.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-nginx",
+        "id": "mtrgen-nginx",
         "aliases": [
-          "Jinja Nginx",
-          "jinja-nginx"
+          "MTRGen Nginx",
+          "mtr-nginx"
         ],
         "extensions": [
-          ".conf.j2",
-          ".conf.jinja",
-          ".conf.jinja2"
+          ".conf.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-groovy",
+        "id": "mtrgen-groovy",
         "aliases": [
-          "Jinja Groovy",
-          "jinja-groovy"
+          "MTRGen Groovy",
+          "mtr-groovy"
         ],
         "extensions": [
-          ".groovy.j2",
-          ".groovy.jinja",
-          ".groovy.jinja2"
+          ".groovy.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-systemd",
+        "id": "mtrgen-systemd",
         "aliases": [
-          "Jinja Systemd Unit File",
-          "jinja-systemd"
+          "MTRGen Systemd Unit File",
+          "mtr-systemd"
         ],
         "extensions": [
-          ".link.j2",
-          ".link.jinja",
-          ".link.jinja2",
-          ".netdev.j2",
-          ".netdev.jinja",
-          ".netdev.jinja2",
-          ".network.j2",
-          ".network.jinja",
-          ".network.jinja2",
-          ".service.j2",
-          ".service.jinja",
-          ".service.jinja2",
-          ".socket.j2",
-          ".socket.jinja",
-          ".socket.jinja2",
-          ".device.j2",
-          ".device.jinja",
-          ".device.jinja2",
-          ".mount.j2",
-          ".mount.jinja",
-          ".mount.jinja2",
-          ".automount.j2",
-          ".automount.jinja",
-          ".automount.jinja2",
-          ".swap.j2",
-          ".swap.jinja",
-          ".swap.jinja2",
-          ".target.j2",
-          ".target.jinja",
-          ".target.jinja2",
-          ".path.j2",
-          ".path.jinja",
-          ".path.jinja2",
-          ".timer.j2",
-          ".timer.jinja",
-          ".timer.jinja2",
-          ".snapshot.j2",
-          ".snapshot.jinja",
-          ".snapshot.jinja2",
-          ".slice.j2",
-          ".slice.jinja",
-          ".slice.jinja2",
-          ".scope.j2",
-          ".scope.jinja",
-          ".scope.jinja2"
+          ".link.mtr",
+          ".netdev.mtr",
+          ".network.mtr",
+          ".service.mtr",
+          ".socket.mtr",
+          ".device.mtr",
+          ".mount.mtr",
+          ".automount.mtr",
+          ".swap.mtr",
+          ".target.mtr",
+          ".path.mtr",
+          ".timer.mtr",
+          ".snapshot.mtr",
+          ".slice.mtr",
+          ".scope.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-cpp",
+        "id": "mtrgen-cpp",
         "aliases": [
-          "Jinja C++",
-          "jinja-cpp"
+          "MTRGen C++",
+          "mtr-cpp"
         ],
         "extensions": [
-          ".c.j2",
-          ".c.jinja",
-          ".c.jinja2",
-          ".cpp.j2",
-          ".cpp.jinja",
-          ".cpp.jinja2",
-          ".h.j2",
-          ".h.jinja",
-          ".h.jinja2"
+          ".c.mtr",
+          ".cpp.mtr",
+          ".h.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-cisco",
+        "id": "mtrgen-cisco",
         "aliases": [
-          "Jinja Cisco Config"
+          "MTRGen Cisco Config"
         ],
         "extensions": [
-          ".ios.j2",
-          ".ios.jinja",
-          ".ios.jinja2",
-          ".cisco.j2",
-          ".cisco.jinja",
-          ".cisco.jinja2"
+          ".ios.mtr",
+          ".cisco.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-java",
+        "id": "mtrgen-java",
         "aliases": [
-          "Jinja Java"
+          "MTRGen Java"
         ],
         "extensions": [
-          ".java.j2",
-          ".java.jinja",
-          ".java.jinja2"
+          ".java.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-php",
+        "id": "mtrgen-php",
         "aliases": [
-          "Jinja PHP"
+          "MTRGen PHP"
         ],
         "extensions": [
-          ".php.j2",
-          ".php.jinja",
-          ".php.jinja2"
+          ".php.mtr"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "jinja-rust",
+        "id": "mtrgen-rust",
         "aliases": [
-          "Jinja Rust"
+          "MTRGen Rust"
         ],
         "extensions": [
-          ".rs.j2",
-          ".rs.jinja",
-          ".rs.jinja2"
+          ".rs.mtr"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "htmlLanguageParticipants": [
       {
-        "languageId": "jinja-html",
+        "languageId": "mtrgen-html",
         "autoInsert": true
       }
     ],
     "grammars": [
       {
-        "language": "jinja-html",
-        "scopeName": "text.html.jinja",
-        "path": "./syntaxes/jinja-html.tmLanguage.json"
+        "language": "mtrgen-html",
+        "scopeName": "text.html.mtrgen",
+        "path": "./syntaxes/mtrgen-html.tmLanguage.json"
       },
       {
-        "language": "jinja-xml",
-        "scopeName": "text.xml.jinja",
-        "path": "./syntaxes/jinja-xml.tmLanguage.json"
+        "language": "mtrgen-xml",
+        "scopeName": "text.xml.mtrgen",
+        "path": "./syntaxes/mtrgen-xml.tmLanguage.json"
       },
       {
-        "language": "jinja-css",
-        "scopeName": "text.css.jinja",
-        "path": "./syntaxes/jinja-css.tmLanguage.json"
+        "language": "mtrgen-css",
+        "scopeName": "text.css.mtrgen",
+        "path": "./syntaxes/mtrgen-css.tmLanguage.json"
       },
       {
-        "language": "jinja-json",
-        "scopeName": "text.json.jinja",
-        "path": "./syntaxes/jinja-json.tmLanguage.json"
+        "language": "mtrgen-json",
+        "scopeName": "text.json.mtrgen",
+        "path": "./syntaxes/mtrgen-json.tmLanguage.json"
       },
       {
-        "language": "jinja-md",
-        "scopeName": "text.html.markdown.jinja",
-        "path": "./syntaxes/jinja-md.tmLanguage.json"
+        "language": "mtrgen-md",
+        "scopeName": "text.html.markdown.mtrgen",
+        "path": "./syntaxes/mtrgen-md.tmLanguage.json"
       },
       {
-        "language": "jinja-py",
-        "scopeName": "source.python.jinja",
-        "path": "./syntaxes/jinja-python.tmLanguage.json"
+        "language": "mtrgen-py",
+        "scopeName": "source.python.mtrgen",
+        "path": "./syntaxes/mtrgen-python.tmLanguage.json"
       },
       {
-        "language": "jinja-cy",
-        "scopeName": "source.cython.jinja",
-        "path": "./syntaxes/jinja-cython.tmLanguage.json"
+        "language": "mtrgen-cy",
+        "scopeName": "source.cython.mtrgen",
+        "path": "./syntaxes/mtrgen-cython.tmLanguage.json"
       },
       {
-        "language": "jinja-rb",
-        "scopeName": "text.ruby.jinja",
-        "path": "./syntaxes/jinja-ruby.tmLanguage.json"
+        "language": "mtrgen-rb",
+        "scopeName": "text.ruby.mtrgen",
+        "path": "./syntaxes/mtrgen-ruby.tmLanguage.json"
       },
       {
-        "language": "jinja-js",
-        "scopeName": "source.js.jinja",
-        "path": "./syntaxes/jinja-js.tmLanguage.json"
+        "language": "mtrgen-js",
+        "scopeName": "source.js.mtrgen",
+        "path": "./syntaxes/mtrgen-js.tmLanguage.json"
       },
       {
-        "language": "jinja-ts",
-        "scopeName": "source.ts.jinja",
-        "path": "./syntaxes/jinja-ts.tmLanguage.json"
+        "language": "mtrgen-ts",
+        "scopeName": "source.ts.mtrgen",
+        "path": "./syntaxes/mtrgen-ts.tmLanguage.json"
       },
       {
-        "language": "jinja-yaml",
-        "scopeName": "text.yaml.jinja",
-        "path": "./syntaxes/jinja-yaml.tmLanguage.json"
+        "language": "mtrgen-yaml",
+        "scopeName": "text.yaml.mtrgen",
+        "path": "./syntaxes/mtrgen-yaml.tmLanguage.json"
       },
       {
-        "language": "jinja-toml",
-        "scopeName": "text.toml.jinja",
-        "path": "./syntaxes/jinja-toml.tmLanguage.json"
+        "language": "mtrgen-toml",
+        "scopeName": "text.toml.mtrgen",
+        "path": "./syntaxes/mtrgen-toml.tmLanguage.json"
       },
       {
-        "language": "jinja-latex",
-        "scopeName": "text.latex.jinja",
-        "path": "./syntaxes/jinja-latex.tmLanguage.json"
+        "language": "mtrgen-latex",
+        "scopeName": "text.latex.mtrgen",
+        "path": "./syntaxes/mtrgen-latex.tmLanguage.json"
       },
       {
-        "language": "jinja-lua",
-        "scopeName": "text.lua.jinja",
-        "path": "./syntaxes/jinja-lua.tmLanguage.json"
+        "language": "mtrgen-lua",
+        "scopeName": "text.lua.mtrgen",
+        "path": "./syntaxes/mtrgen-lua.tmLanguage.json"
       },
       {
-        "language": "jinja-properties",
-        "scopeName": "source.ini.jinja",
-        "path": "./syntaxes/jinja-properties.tmLanguage.json"
+        "language": "mtrgen-properties",
+        "scopeName": "source.ini.mtrgen",
+        "path": "./syntaxes/mtrgen-properties.tmLanguage.json"
       },
       {
-        "language": "jinja-shell",
-        "scopeName": "source.shell.jinja",
-        "path": "./syntaxes/jinja-shell.tmLanguage.json"
+        "language": "mtrgen-shell",
+        "scopeName": "source.shell.mtrgen",
+        "path": "./syntaxes/mtrgen-shell.tmLanguage.json"
       },
       {
-        "language": "jinja-dockerfile",
-        "scopeName": "source.dockerfile.jinja",
-        "path": "./syntaxes/jinja-dockerfile.tmLanguage.json"
+        "language": "mtrgen-dockerfile",
+        "scopeName": "source.dockerfile.mtrgen",
+        "path": "./syntaxes/mtrgen-dockerfile.tmLanguage.json"
       },
       {
-        "language": "jinja-sql",
-        "scopeName": "source.sql.jinja",
-        "path": "./syntaxes/jinja-sql.tmLanguage.json"
+        "language": "mtrgen-sql",
+        "scopeName": "source.sql.mtrgen",
+        "path": "./syntaxes/mtrgen-sql.tmLanguage.json"
       },
       {
-        "language": "jinja",
-        "scopeName": "source.jinja",
-        "path": "./syntaxes/jinja.tmLanguage.json"
+        "language": "mtrgen",
+        "scopeName": "source.mtrgen",
+        "path": "./syntaxes/mtrgen.tmLanguage.json"
       },
       {
-        "language": "jinja-groovy",
-        "scopeName": "source.groovy.jinja",
-        "path": "./syntaxes/jinja-groovy.tmLanguage.json"
+        "language": "mtrgen-groovy",
+        "scopeName": "source.groovy.mtrgen",
+        "path": "./syntaxes/mtrgen-groovy.tmLanguage.json"
       },
       {
-        "language": "jinja-terraform",
-        "scopeName": "source.terraform.jinja",
-        "path": "./syntaxes/jinja-terraform.tmLanguage.json"
+        "language": "mtrgen-terraform",
+        "scopeName": "source.terraform.mtrgen",
+        "path": "./syntaxes/mtrgen-terraform.tmLanguage.json"
       },
       {
-        "language": "jinja-nginx",
-        "scopeName": "source.nginx.jinja",
-        "path": "./syntaxes/jinja-nginx.tmLanguage.json"
+        "language": "mtrgen-nginx",
+        "scopeName": "source.nginx.mtrgen",
+        "path": "./syntaxes/mtrgen-nginx.tmLanguage.json"
       },
       {
-        "language": "jinja-systemd",
-        "scopeName": "source.systemd.jinja",
-        "path": "./syntaxes/jinja-systemd.tmLanguage.json"
+        "language": "mtrgen-systemd",
+        "scopeName": "source.systemd.mtrgen",
+        "path": "./syntaxes/mtrgen-systemd.tmLanguage.json"
       },
       {
-        "language": "jinja-cpp",
-        "scopeName": "source.cpp.jinja",
-        "path": "./syntaxes/jinja-cpp.tmLanguage.json"
+        "language": "mtrgen-cpp",
+        "scopeName": "source.cpp.mtrgen",
+        "path": "./syntaxes/mtrgen-cpp.tmLanguage.json"
       },
       {
-        "language": "jinja-cisco",
-        "scopeName": "source.cisco.jinja",
-        "path": "./syntaxes/jinja-cisco.tmLanguage.json"
+        "language": "mtrgen-cisco",
+        "scopeName": "source.cisco.mtrgen",
+        "path": "./syntaxes/mtrgen-cisco.tmLanguage.json"
       },
       {
-        "language": "jinja-java",
-        "scopeName": "source.java.jinja",
-        "path": "./syntaxes/jinja-java.tmLanguage.json"
+        "language": "mtrgen-java",
+        "scopeName": "source.java.mtrgen",
+        "path": "./syntaxes/mtrgen-java.tmLanguage.json"
       },
       {
-        "language": "jinja-php",
-        "scopeName": "source.php.jinja",
-        "path": "./syntaxes/jinja-php.tmLanguage.json"
+        "language": "mtrgen-php",
+        "scopeName": "source.php.mtrgen",
+        "path": "./syntaxes/mtrgen-php.tmLanguage.json"
       },
       {
-        "language": "jinja-rust",
-        "scopeName": "source.rust.jinja",
-        "path": "./syntaxes/jinja-rust.tmLanguage.json"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "jinja-html",
-        "scopeName": "text.html.jinja",
-        "path": "./snippets/django-snippets.json"
+        "language": "mtrgen-rust",
+        "scopeName": "source.rust.mtrgen",
+        "path": "./syntaxes/mtrgen-rust.tmLanguage.json"
       }
     ],
     "breakpoints": [
       {
-        "language": "jinja-html"
+        "language": "mtrgen-html"
       },
       {
-        "language": "jinja-xml"
+        "language": "mtrgen-xml"
       },
       {
-        "language": "jinja-css"
+        "language": "mtrgen-css"
       },
       {
-        "language": "jinja-json"
+        "language": "mtrgen-json"
       },
       {
-        "language": "jinja-md"
+        "language": "mtrgen-md"
       },
       {
-        "language": "jinja-py"
+        "language": "mtrgen-py"
       },
       {
-        "language": "jinja-cy"
+        "language": "mtrgen-cy"
       },
       {
-        "language": "jinja-rb"
+        "language": "mtrgen-rb"
       },
       {
-        "language": "jinja-js"
+        "language": "mtrgen-js"
       },
       {
-        "language": "jinja-ts"
+        "language": "mtrgen-ts"
       },
       {
-        "language": "jinja-yaml"
+        "language": "mtrgen-yaml"
       },
       {
-        "language": "jinja-toml"
+        "language": "mtrgen-toml"
       },
       {
-        "language": "jinja-latex"
+        "language": "mtrgen-latex"
       },
       {
-        "language": "jinja-lua"
+        "language": "mtrgen-lua"
       },
       {
-        "language": "jinja-properties"
+        "language": "mtrgen-properties"
       },
       {
-        "language": "jinja-shell"
+        "language": "mtrgen-shell"
       },
       {
-        "language": "jinja-dockerfile"
+        "language": "mtrgen-dockerfile"
       },
       {
-        "language": "jinja-sql"
+        "language": "mtrgen-sql"
       },
       {
-        "language": "jinja-groovy"
+        "language": "mtrgen-groovy"
       },
       {
-        "language": "jinja-terraform"
+        "language": "mtrgen-terraform"
       },
       {
-        "language": "jinja-nginx"
+        "language": "mtrgen-nginx"
       },
       {
-        "language": "jinja-systemd"
+        "language": "mtrgen-systemd"
       },
       {
-        "language": "jinja-cpp"
+        "language": "mtrgen-cpp"
       },
       {
-        "language": "jinja-java"
+        "language": "mtrgen-java"
       },
       {
-        "language": "jinja-php"
+        "language": "mtrgen-php"
       },
       {
-        "language": "jinja-cisco"
+        "language": "mtrgen-cisco"
       },
       {
-        "language": "jinja-rust"
+        "language": "mtrgen-rust"
       }
     ]
   }

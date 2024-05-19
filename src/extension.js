@@ -6,7 +6,7 @@ async function activate() {
   const htmlExtension = vscode.extensions.getExtension('vscode.html-language-features')
 
   if (!htmlExtension) {
-    const output = vscode.window.createOutputChannel('Jinja')
+    const output = vscode.window.createOutputChannel('MTRGen')
 
     output.appendLine(
       'Warning: Could not find vscode.html-language-features. HTML Language Participants support will be disabled.',

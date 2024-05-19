@@ -1,0 +1,8 @@
+class Immutable<% name|upper %><% name %> {
+    constructor(<% properties|join:", " %>) {
+        Object.defineProperty(this, "<% prop %>", {
+            "value": <% prop %>,
+            "writable": false,
+        });
+    }
+}

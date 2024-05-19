@@ -1,0 +1,8 @@
+from X import Y
+
+class Foo:
+    def bar(self, y: Y) -> None:
+        return <% variable %>
+
+    def <% methodName %>(self):
+        return <% methodReturnValue %>

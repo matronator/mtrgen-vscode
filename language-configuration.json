@@ -1,13 +1,7 @@
 {
-  "comments": {
-    // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
-    "blockComment": ["{#", "#}"]
-  },
   // symbols used as brackets
   "brackets": [
-    ["{#", "#}"],
-    ["{%", "%}"],
-    ["{{", "}}"],
+    ["<%", "%>"],
     ["{", "}"],
     ["[", "]"],
     ["(", ")"]
@@ -15,9 +9,7 @@
   // symbols that are auto closed when typing
   "autoClosingPairs": [
     ["@/", "/"],
-    ["{#", "#}"],
-    ["{%", "%}"],
-    ["{{", "}}"],
+    ["<%", "%>"],
     ["{", "}"],
     ["[", "]"],
     ["(", ")"],
@@ -31,11 +23,5 @@
     ["(", ")"],
     ["\"", "\""],
     ["'", "'"]
-  ],
-  "folding": {
-    "markers": {
-      "start": "{%\\s*(block|filter|for|if|macro|raw)",
-      "end": "{%\\s*end(block|filter|for|if|macro|raw)\\s*%}"
-    }
-  }
+  ]
 }
